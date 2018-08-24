@@ -17,20 +17,24 @@ import edu.wpi.first.wpilibj.buttons.Trigger;
 public class OI {
      Joystick stick = new Joystick(0);
      
+     Button rightBumper = new JoystickButton(stick, 5);
+     Button leftBumper = new JoystickButton(stick, 6);
+     
      public Joystick getJoystick() {
     	 return stick;
      }
      
      
-     Button rightBumper = new JoystickButton(stick, 5);
-     Button leftBumper = new JoystickButton(stick, 6);
      
-     Trigger shoot = new ShootTrigger(5, 6);
      
+     Trigger shoot = new ShootTrigger(stick, 5, 6);
+//     Trigger shoot2 = new JoystickButton(stick, 5);
      Button aButton = new JoystickButton(stick, 1);
     
      public OI() {
+    	 
     	 aButton.whenPressed(new Load());
+    	 //shoot.whenActive(new Shoot());
     	 shoot.whenActive(new Shoot());
      }
      

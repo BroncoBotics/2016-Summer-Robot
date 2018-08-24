@@ -11,7 +11,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Drivetrain extends Subsystem {
 	
-	RobotDrive drive = new RobotDrive(RobotMap.leftMotor, RobotMap.rightMotor);
+	RobotDrive drive = new RobotDrive(RobotMap.BackLeft, RobotMap.FrontLeft, RobotMap.BackRight, RobotMap.FrontRight);
 	
 	public void arcadeDriveTrigger(double right_trigger, double left_trigger, double rot) {
 		drive.arcadeDrive((right_trigger - left_trigger), 0.4 * rot, false);
