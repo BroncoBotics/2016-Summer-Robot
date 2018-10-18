@@ -8,22 +8,15 @@ package org.usfirst.frc.team991.robot;
 public class RobotMap {
   
 	// Motors
-	public static int BackLeft = 0;
-	public static int FrontLeft = 1;
-	public static int BackRight = 2;
-	public static int FrontRight = 3;
-	
+	public static int leftMotor = 1;
+	public static int rightMotor = 2;
+	public static int pivot = 2;
     
     // Pneumatics
-	public static int loader = 0;
+	public static int loader = 1;
 	public static int shooter = 1;
 	
 	// Timeouts
-	public static int loadTimeout = 3;
-	public static int shootTimeout = 3;
-	
-	
-	public static int pivot = 4;
-	
-
+	public static int loadTimeout = 1;
+	public static int shootTimeout = 1;
 }
