@@ -12,17 +12,13 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Robot extends IterativeRobot {
 
-	
-	public static Drivetrain drivetrain;
-	public static Pneumatics compressor;
-	public static Cannon cannon;
+	public static final Drivetrain drivetrain = new Drivetrain();
+	public static final Pneumatics compressor = new Pneumatics();
+	public static final Cannon cannon = new Cannon();
 	public static OI oi;
 
     public void robotInit() {
-    	drivetrain = new Drivetrain();
-    	compressor = new Pneumatics();
-    	cannon = new Cannon();
-    	oi = new OI();
+		oi = new OI();
     }
     
     public void disabledInit(){}

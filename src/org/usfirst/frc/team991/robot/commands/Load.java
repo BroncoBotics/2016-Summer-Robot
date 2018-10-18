@@ -14,18 +14,16 @@ public class Load extends Command {
         requires(Robot.cannon);
         setInterruptible(false);
         setTimeout(RobotMap.loadTimeout);
-        System.out.println("poteasdjfdaifmadjfad");
     }
 
     protected void initialize() {
     	Robot.cannon.loadOn();
-    	System.out.println("fthsdnjlsvdkjnvs");
     }
 
     protected void execute() {}
 
     protected boolean isFinished() {
-        return isTimedOut();
+        return false;
     }
 
     protected void end() {
